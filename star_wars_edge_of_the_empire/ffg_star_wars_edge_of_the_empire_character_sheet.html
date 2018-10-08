@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Star Wars: Edge of the Empire Character Sheet</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <style type="text/css">
+      body{
+        background-color: #f1f1f1;
+      }
+      .pagebreak {
+        page-break-before: always;
+      }
+      @media print {
+        body { background-color: #FFFFFF; background-image: none; color: #000000; }
+        #ad { display: none; }
+        #contentarea { width: 100%; }
+      }
+    </style>
+    <!-- pagebreak allows to do <div class="pagebreak"></div> to break page. -->
+    <header class="w3-center">
+      <h1>Star Wars: Edge of the Empire Character Sheet</h1>
+    </header>
+    <nav>
+    </nav>
+    <section id="character_information" class="w3-row">
+      <h2 class="w3-center">Character Information</h2>
+      <section class="w3-border w3-row">
+        <section id="information" class=w3-half>
+          <article>
+            <text>Player Name:</text>
+            <input type="text" name="player_name" value="Philbo Baggins">
+          </article>
+          <article>
+            <text>Character Name:</text>
+            <input type="text" name="character_name" value="Jimbob Joe Pants">
+          </article>
+          <article>
+            <text>Species Name:</text>
+            <input type="text" name="species_name" value="Human">
+          </article>
+        </section>
+        <section id="character_career" class="w3-half">
+          <article>
+            <text>Career Name:</text>
+            <input type="text" name="career_name" value="Janitor">
+          </article>
+          <article>
+            <text>Specialization Name:</text>
+            <input type="text" name="specialization_name" value="Master of the custodial arts">
+          </article>
+        </section>
+        <section id="character_experince" class="w3-row">
+          <article class="w3-half">
+            <text>Total XP:</text>
+            <text>0</text>
+          </article>
+          <article class="w3-half">
+            <text>Available XP:</text>
+            <text>0</text>
+          </article>
+        </section>
+      </section>
+    </section>
+    <section id="stats" class="w3-row">
+      <h2 class="w3-center">Character Statistics</h2>
+      <section id="core_stats" class="w3-half w3-center w3-row w3-border">
+        <h3>Character Core Statistics</h3>
+        <article id="brawn">
+          <div class="w3-col" style="width:16%">
+            <div>
+              <text>Brawn</text>
+            </div>
+            <div>
+              <text>2</text>
+            </div>
+          </div>
+        </article>
+        <article id="agility">
+          <div class="w3-col" style="width:16%">
+            <div>
+              <text>Agility</text>
+            </div>
+            <div>
+              <text>2</text>
+            </div>
+          </div>
+        </article>
+        <article id="intellect">
+          <div class="w3-col" style="width:16%">
+            <div>
+              <text>Intellect</text>
+            </div>
+            <div>
+              <text>2</text>
+            </div>
+          </div>
+        </article>
+        <article id="cunning">
+          <div class="w3-col" style="width:16%">
+            <div>
+              <text>Cunning</text>
+            </div>
+            <div>
+              <text>2</text>
+            </div>
+          </div>
+        </article>
+        <article id="willpower">
+          <div class="w3-col" style="width:16%">
+            <div>
+              <text>Willpower</text>
+            </div>
+            <div>
+              <text>2</text>
+            </div>
+          </div>
+        </article>
+        <article id="presence">
+          <div class="w3-col" style="width:16%">
+            <div>
+              <text>Presence</text>
+            </div>
+            <div>
+              <text>2</text>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="derived_stats" class="w3-half w3-center w3-row w3-border">
+        <h3>Character Derived Statistics</h3>
+        <article id="soak">
+          <div class="w3-col" style="width:25%">
+            <div>
+              <text>Soak</text>
+            </div>
+            <div>
+              <text>2</text>
+            </div>
+          </div>
+        </article>
+        <article id="wounds">
+          <div class="w3-col" style="width:25%">
+            <div>
+              <text>Wounds</text>
+            </div>
+            <div>
+              <text>14</text>
+              <text>/</text>
+              <text>0</text>
+            </div>
+          </div>
+        </article>
+        <article id="strain">
+          <div class="w3-col" style="width:25%">
+            <div>
+              <text>Strain</text>
+            </div>
+            <div>
+              <text>14</text>
+              <text>/</text>
+              <text>0</text>
+            </div>
+          </div>
+        </article>
+        <article id="defense">
+          <div class="w3-col" style="width:25%">
+            <div>
+              <text>Defense</text>
+            </div>
+            <div>
+              <text>0</text>
+              <text>/</text>
+              <text>0</text>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+    <section id="skills" class="w3-row">
+      <h2 class="w3-center">Skills</h2>
+      <section class="w3-half">
+        <section id="general_skills" class="w3-border w3-row">
+          <h3 class="w3-center">General Skills</h3>
+          <article id="general_skill_headers">
+            <div class="w3-third">
+              NAME
+            </div>
+            <div class="w3-third">
+              CAREER?
+            </div>
+            <div class="w3-third">
+              RANKS
+            </div>
+          </article>
+          <article id="skill_astrogation">
+            <div class="w3-third">
+              Astrogation(Int.)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_astrogation_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_athletics">
+            <div class="w3-third">
+              Athletics(Br)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_athletics_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_charm">
+            <div class="w3-third">
+              Charm(Pr)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_charm_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_coercion">
+            <div class="w3-third">
+              Coercion(Will)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_coercion_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_computers">
+            <div class="w3-third">
+              Computers(Int)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_computers_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_cool">
+            <div class="w3-third">
+              Cool(Pr)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_cool_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_coordination">
+            <div class="w3-third">
+              Coordination(Ag)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_coordination_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_deception">
+            <div class="w3-third">
+              Deception(Cun)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_deception_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_discipline">
+            <div class="w3-third">
+              Discipline(Will)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_discipline_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_leadership">
+            <div class="w3-third">
+              Leadership(Pr)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_leadership_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_mechanics">
+            <div class="w3-third">
+              Mechanics(Int)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_mechanics_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_medicine">
+            <div class="w3-third">
+              Medicine(Int)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_medicine_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_negotiation">
+            <div class="w3-third">
+              Negotiation(Pr)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_negotiation_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_perception">
+            <div class="w3-third">
+              Perception(Cun)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_perception_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_piloting_planetary" class="w3-row">
+            <div class="w3-third">
+              Piloting - Planetary(Ag)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_piloting_planetary_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_piloting_space" class="w3-row">
+            <div class="w3-third">
+              Piloting - Space(Ag)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_piloting_space_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_resilience">
+            <div class="w3-third">
+              Resilience(Br)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_resilience_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_skulduggery">
+            <div class="w3-third">
+              Skulduggery(Cun)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_skulduggery_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_stealth">
+            <div class="w3-third">
+              Stealth(Ag)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_stealth_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_streetwise">
+            <div class="w3-third">
+              Streetwise(Cun)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_streetwise_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_survival">
+            <div class="w3-third">
+              Survival(Cun)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_survival_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+          <article id="skill_vigilance">
+            <div class="w3-third">
+              Vigilance(Will)
+            </div>
+            <div class="w3-third">
+              <input type="checkbox" value="skill_vigilance_true">
+            </div>
+            <div class="w3-third">
+              <input type="number" step="1" value="0">
+            </div>
+          </article>
+        </section>
+      </section>
+      <section class="w3-half">
+        <section id="combat_skills" class="w3-border w3-row">
+          <h3 class="w3-center">Combat Skills</h3>
+          <article>
+            <div class="w3-third">
+              NAME
+            </div>
+            <div class="w3-third">
+              CAREER?
+            </div>
+            <div class="w3-third">
+              RANKS
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Brawl(Br)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Gunnery(Ag)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Melee(Br)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Ranged - Light(Ag)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Ranged - Heavy(Ag)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+        </section>
+        <section id="knowledge_skills" class="w3-border w3-row">
+          <h3 class="w3-center">Knowledge Skills</h3>
+          <article>
+            <div class="w3-third">
+              NAME
+            </div>
+            <div class="w3-third">
+              CAREER?
+            </div>
+            <div class="w3-third">
+              RANKS
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Core Worlds(Int)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Education(Int)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Lore(Int)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Outer Rim(Int)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Underworld(Int)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Xenology(Int)
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              Other:?
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+        </section>
+        <section id="custom_skills" class="w3-border w3-row">
+          <h3 class="w3-center">Custom Skills</h3>
+          <article>
+            <div class="w3-third">
+              NAME
+            </div>
+            <div class="w3-third">
+              CAREER?
+            </div>
+            <div class="w3-third">
+              RANKS
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+          <article>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              ?
+            </div>
+            <div class="w3-third">
+              0
+            </div>
+          </article>
+        </section>
+      </section>
+    </section>
+    <section id="weapons" class="w3-row">
+      <h2 class="w3-center">Weapons</h2>
+      <article id="weapon_headers" class="w3-border w3-row">
+        <div id="weapon_name" class="w3-center w3-col" style="width:16%">
+          WEAPON
+        </div>
+        <div id="weapon_skill" class="w3-center w3-col" style="width:16%">
+          SKILL
+        </div>
+        <div id="weapon_damage" class="w3-center w3-col" style="width:16%">
+          DAMAGE
+        </div>
+        <div id="weapon_range" class="w3-center w3-col" style="width:16%">
+          RANGE
+        </div>
+        <div id="weapon_crit" class="w3-center w3-col" style="width:16%">
+          CRIT
+        </div>
+        <div id="weapon_special" class="w3-center w3-col" style="width:16%">
+          SPECIAL
+        </div>
+      </article>
+    </section>
+    <section id="personal_information" class="w3-row">
+      <h2 class="w3-center">Personal Information</h2>
+      <section id="character_description" class="w3-border">
+        <h3 class="w3-center">Character Description</h3>
+        <article>
+          <text>GENDER:</text>
+          <text>Male</text1>
+        </article>
+        <article>
+          <text>AGE:</text>
+          <text>30</text>
+        </article>
+        <article>
+          <text>HEIGHT:</text>
+          <text>5'9</text>
+        </article>
+        <article>
+          <text>BUILD:</text>
+          <text>Stocky</text>
+        </article>
+        <article>
+          <text>HAIR:</text>
+          <text>Brown</text>
+        </article>
+        <article>
+          <text>EYES:</text>
+          <text>Brown</text>
+        </article>
+        <article>
+          <div>NOTABLE FEATURES:</div>
+          <text>weiners</text>
+        </article>
+      </section>
+      <section id="motivations">
+        <h3 class="w3-center">Motivations</h3>
+        <article class="w3-border">
+          <div>
+            <text>TYPE:</text>
+            <text>something</text>
+          </div>
+          <div>
+            <text>DESCRIPTION:</text>
+            <text>Something.</text>
+          </div>
+        </article>
+        <article></article>
+      </section>
+      <section id="obligations">
+        <h3 class="w3-center">Obligations</h3>
+        <article class="w3-border">
+          <div>
+            <text>TYPE:</text>
+            <text>something</text>
+          </div>
+          <div>
+            <text>MAGNITUDE:</text>
+            <text>Something.</text>
+          </div>
+        </article>
+      </section>
+    </section>
+    <section id="critical_injuries" class="w3-row">
+      <h2 class="w3-center">Critical Inuries</h2>
+      <article class="w3-border">
+        <div>
+          <text>SEVERITY:</text>
+          <text>none</text>
+        </div>
+        <div>
+          <text>RESULT:</text>
+          <text>non</text>
+        </div>
+      </article>
+    </section>
+    <section id="equipment" class="w3-row">
+      <h2 class="w3-center">Equipment Log</h2>
+      <article>
+        <text>CREDITS:</text>
+        <input type="number" step="1" value="0">
+      </article>
+      <section>
+        <h3 class="w3-center">Weapons and Armor</h3>
+        <textarea></textarea>
+      </section>
+      <section>
+        <h3 class="w3-center">Personal Gear</h3>
+        <textarea></textarea>
+      </section>
+    </section>
+    <section id="talents_and_special_abilities" class="w3-row">
+      <h2 class="w3-center">Talents and Special Abilities</h2>
+      <article class="w3-border w3-row">
+        <div class="w3-quarter">
+          NAME
+        </div>
+        <div class="w3-quarter">
+          PAGE #
+        </div>
+        <div class="w3-rest">
+          ABILITY SUMMARY
+        </div>
+      </article>
+    </section>
+    <footer class="w3-center w3-row">
+      <font size="1">
+        <a href="https://www.fantasyflightgames.com/en/products/star-wars-edge-of-the-empire/">Star Wars: Edge of the Empire</a>
+        <text>is licensed under</text>
+        <a href="https://www.fantasyflightgames.com">Fantasy Flight Games</a>
+        <text>.</text>
+      </font>
+    </footer>
+  </body>
+</html>
