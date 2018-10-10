@@ -1,0 +1,253 @@
+---
+player_name: Philbo Baggins
+character_name: JimBob JoePants
+species_name: Human
+career_name: Janitor
+total_xp: 0
+available_xp: 0
+stats:
+  brawn: 2
+  agility: 2
+  intellect: 2
+  cunning: 2
+  willpower: 2
+  presence: 2
+  soak: 4
+  wounds_threshold: 10
+  wounds_current: 10
+  strain_threshold: 10
+  strain_current: 10
+  defense_ranged: 0
+  defense_melee: 0
+skills:
+  general_skills:
+    "Alchemy":
+      link: Int
+      career: false
+      ranks: 0
+    "Astrocartogrphy":
+      link: Int
+      career: false
+      ranks: 0
+    "Athletics":
+      link: Br
+      career: false
+      ranks: 0
+    "Computers":
+      link: Int
+      career: false
+      ranks: 0
+    "Cool":
+      link: Pr
+      career: false
+      ranks: 0
+    "Coordination":
+      link: Ag
+      career: false
+      ranks: 0
+    "Discipline":
+      link: Will
+      career: false
+      ranks: 0
+    "Driving":
+      link: Ag
+      career: false
+      ranks: 0
+    "Mechanics":
+      link: Int
+      career: false
+      ranks: 0
+    "Medicine":
+      link: Int
+      career: false
+      ranks: 0
+    "Operating":
+      link: Int
+      career: false
+      ranks: 0
+    "Perception":
+      link: Cun
+      career: false
+      ranks: 0
+    "Piloting":
+      link: Ag
+      career: false
+      ranks: 0
+    "Resilience":
+      link: Br
+      career: false
+      ranks: 0
+    "Riding":
+      link: Ag
+      career: false
+      ranks: 0
+    "Skulduggery":
+      link: Cun
+      career: false
+      ranks: 0
+    "Stealth":
+      link: Ag
+      career: false
+      ranks: 0
+    "Streetwise":
+      link: Cun
+      career: false
+      ranks: 0
+    "Survival":
+      link: Cun
+      career: false
+      ranks: 0
+    "Vigilance":
+      link: Will
+      career: false
+      ranks: 0
+  magic_skills:
+    "Arcana":
+      link: Int
+      career: false
+      ranks: 0
+    "Divine":
+      link: Will
+      career: false
+      ranks: 0
+    "Primal":
+      link: Cun
+      career: false
+      ranks: 0
+  combat_skills:
+    "Brawl":
+      link: Br
+      career: false
+      ranks: 0
+    "Gunnery":
+      link: Ag
+      career: false
+      ranks: 0
+    "Melee":
+      link: Br
+      career: false
+      ranks: 0
+    "Melee - Heavy":
+      link: Br
+      career: false
+      ranks: 0
+    "Melee - Light":
+      link: Br
+      career: false
+      ranks: 0
+    "Ranged":
+      link: Ag
+      career: false
+      ranks: 0
+    "Ranged - Heavy":
+      link: Ag
+      career: false
+      ranks: 0
+    "Ranged - Light":
+      link: Ag
+      career: false
+      ranks: 0
+  social_skills:
+    "Charm":
+      link: Pr
+      career: false
+      ranks: 0
+    "Coercion":
+      link: Will
+      career: false
+      ranks: 0
+    "Deception":
+      link: Cun
+      career: false
+      ranks: 0
+    "Leadership":
+      link: Pr
+      career: false
+      ranks: 0
+    "Negotiation":
+      link: Pr
+      career: false
+      ranks: 0
+  knowledge_skills:
+    "Knowledge":
+      link: Int
+      career: false
+      ranks: 0
+  custom_skills:
+    "Unknown":
+      link: "?"
+      career: false
+      ranks: 0
+weapons:
+  - name: Baster Pistol
+    skill: 2
+    damage: 6+
+    range: Medium
+    crit: 4
+    special:
+      - N/A
+character_description:
+  gender: Male
+  age: 30
+  height: 5'9
+  build: stocky
+  hair: Brown
+  eyes: Brown
+  notable_features:
+    - N/A
+motivations:
+  strengths:
+    - Something
+  flaw:
+    - Something
+  desire:
+    - Something
+  fear:
+    - Something
+critical_injuries:
+  - severity: none
+    result: none
+equipment_log:
+  credits: 100
+  weapons_and_armor:
+    - N/A
+  personal_gear:
+    - N/A
+notes:
+  - Something
+talents_and_special_abilities:
+  - name: Something
+    page: GCS#80
+    summary: Something
+talent_tree:
+  tier_1:
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+  tier_2:
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+  tier_3:
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+  tier_4:
+    - N/A
+    - N/A
+    - N/A
+    - N/A
+  tier_5:
+    - N/A
+    - N/A
+    - N/A
+
+...

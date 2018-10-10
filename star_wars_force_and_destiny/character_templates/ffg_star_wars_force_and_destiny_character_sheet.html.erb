@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Star Wars: Edge of the Empire Character Sheet</title>
+    <title><%= character_vars['character_name'] %> Character Sheet</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta name="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
     <style type="text/css">
       body{
         background-color: #f1f1f1;
@@ -23,9 +21,10 @@
         #contentarea { width: 100%; }
       }
     </style>
-    <!-- pagebreak allows to do <div class="pagebreak"></div> to break page. -->
+  </head>
+  <body>
     <header class="w3-center">
-      <h1>Star Wars: Edge of the Empire Character Sheet</h1>
+      <h1>Star Wars: Force and Destiny Character Sheet</h1>
     </header>
     <nav>
     </nav>
@@ -33,38 +32,38 @@
       <h2 class="w3-center">Character Information</h2>
       <section class="w3-border w3-row">
         <section id="information" class=w3-half>
-          <article>
+          <div id="player_name">
             <text>Player Name:</text>
-            <input type="text" name="player_name" value="Philbo Baggins">
-          </article>
-          <article>
+            <input type="text" name="player_name" value="<%= character_vars['player_name'] %>">
+          </div>
+          <div id="character_name">
             <text>Character Name:</text>
-            <input type="text" name="character_name" value="Jimbob Joe Pants">
-          </article>
-          <article>
+            <input type="text" name="character_name" value="<%= character_vars['character_name'] %>">
+          </div>
+          <div id="species_name">
             <text>Species Name:</text>
-            <input type="text" name="species_name" value="Human">
-          </article>
+            <input type="text" name="species_name" value="<%= character_vars['species_name'] %> ">
+          </div>
         </section>
         <section id="character_career" class="w3-half">
-          <article>
+          <div id="career_name">
             <text>Career Name:</text>
-            <input type="text" name="career_name" value="Janitor">
-          </article>
-          <article>
+            <input type="text" name="career_name" value="<%= character_vars['career_name'] %>">
+          </div>
+          <div id="specialization_name">
             <text>Specialization Name:</text>
-            <input type="text" name="specialization_name" value="Master of the custodial arts">
-          </article>
+            <input type="text" name="specialization_name" value="<%= character_vars['specialization_name'] %>">
+          </div>
         </section>
         <section id="character_experince" class="w3-row">
-          <article class="w3-half">
+          <div id="total_xp" class="w3-half">
             <text>Total XP:</text>
-            <input type="number" step="1" value="0">
-          </article>
-          <article class="w3-half">
+            <input type="number" step="1" value="<%= character_vars['total_xp'] %>">
+          </div>
+          <div id="available_xp" class="w3-half">
             <text>Available XP:</text>
-            <input type="number" step="1" value="0">
-          </article>
+            <input type="number" step="1" value="<%= character_vars['available_xp'] %>">
+          </div>
         </section>
       </section>
     </section>
@@ -72,115 +71,115 @@
       <h2 class="w3-center">Character Statistics</h2>
       <section id="core_stats" class="w3-half w3-center w3-row w3-border">
         <h3>Character Core Statistics</h3>
-        <article id="brawn">
+        <div id="brawn">
           <div class="w3-col" style="width:16%">
             <div>
               <text>Brawn</text>
             </div>
             <div>
-              <input type="number" step="1" value="2">
+              <input id="brawn_rank" type="number" step="1" value="<%= character_vars['stats']['brawn'] %>">
             </div>
           </div>
-        </article>
-        <article id="agility">
+        </div>
+        <div id="agility">
           <div class="w3-col" style="width:16%">
             <div>
               <text>Agility</text>
             </div>
             <div>
-              <input type="number" step="1" value="2">
+              <input id="agility_rank" type="number" step="1" value="<%= character_vars['stats']['agility'] %>">
             </div>
           </div>
-        </article>
-        <article id="intellect">
+        </div>
+        <div id="intellect">
           <div class="w3-col" style="width:16%">
             <div>
               <text>Intellect</text>
             </div>
             <div>
-              <input type="number" step="1" value="2">
+              <input id="intellect_rank" type="number" step="1" value="<%= character_vars['stats']['intellect'] %>">
             </div>
           </div>
-        </article>
-        <article id="cunning">
+        </div>
+        <div id="cunning">
           <div class="w3-col" style="width:16%">
             <div>
               <text>Cunning</text>
             </div>
             <div>
-              <input type="number" step="1" value="2">
+              <input id="cunning_rank" type="number" step="1" value="<%= character_vars['stats']['cunning'] %>">
             </div>
           </div>
-        </article>
-        <article id="willpower">
+        </div>
+        <div id="willpower">
           <div class="w3-col" style="width:16%">
             <div>
               <text>Willpower</text>
             </div>
             <div>
-              <input type="number" step="1" value="2">
+              <input id="willpower_rank" type="number" step="1" value="<%= character_vars['stats']['willpower'] %>">
             </div>
           </div>
-        </article>
-        <article id="presence">
+        </div>
+        <div id="presence">
           <div class="w3-col" style="width:16%">
             <div>
               <text>Presence</text>
             </div>
             <div>
-              <input type="number" step="1" value="2">
+              <input id="presence_rank" type="number" step="1" value="<%= character_vars['stats']['presence'] %>">
             </div>
           </div>
-        </article>
+        </div>
       </section>
       <section id="derived_stats" class="w3-half w3-center w3-row w3-border">
         <h3>Character Derived Statistics</h3>
-        <article id="soak">
+        <div id="soak">
           <div class="w3-col" style="width:25%">
             <div>
               <text>Soak</text>
             </div>
             <div>
-              <input type="number" step="1" value="2">
+              <input id="soak_rank" type="number" step="1" value="<%= character_vars['stats']['soak'] %>">
             </div>
           </div>
-        </article>
-        <article id="wounds">
+        </div>
+        <div id="wounds">
           <div class="w3-col" style="width:25%">
             <div>
               <text>Wounds</text>
             </div>
             <div>
-              <input type="number" step="1" value="10">
+              <input id="wounds_threshold" type="number" step="1" value="<%= character_vars['stats']['wounds_threshold'] %>">
               <text>/</text>
-              <input type="number" step="1" value="10">
+              <input id="wounds_current" type="number" step="1" value="<%= character_vars['stats']['wounds_current'] %>">
             </div>
           </div>
-        </article>
-        <article id="strain">
+        </div>
+        <div id="strain">
           <div class="w3-col" style="width:25%">
             <div>
               <text>Strain</text>
             </div>
             <div>
-              <input type="number" step="1" value="10">
+              <input id="strain_threshold" type="number" step="1" value="<%= character_vars['stats']['strain_threshold'] %>">
               <text>/</text>
-              <input type="number" step="1" value="10">
+              <input id="strain_current" type="number" step="1" value="<%= character_vars['stats']['strain_current'] %>">
             </div>
           </div>
-        </article>
-        <article id="defense">
+        </div>
+        <div id="defense">
           <div class="w3-col" style="width:25%">
             <div>
               <text>Defense</text>
             </div>
             <div>
-              <input type="number" step="1" value="0">
+              <input id="defense_ranged" type="number" step="1" value="<%= character_vars['stats']['defense_ranged'] %>">
               <text>/</text>
-              <input type="number" step="1" value="0">
+              <input id="defense_melee" type="number" step="1" value="<%= character_vars['stats']['defense_melee'] %>">
             </div>
           </div>
-        </article>
+        </div>
       </section>
     </section>
     <section id="skills" class="w3-row">
@@ -188,7 +187,7 @@
       <section class="w3-half">
         <section id="general_skills" class="w3-border w3-row">
           <h3 class="w3-center">General Skills</h3>
-          <article id="general_skill_headers">
+          <div id="general_skill_headers">
             <div class="w3-third">
               NAME
             </div>
@@ -198,255 +197,26 @@
             <div class="w3-third">
               RANKS
             </div>
-          </article>
-          <article id="skill_astrogation">
+          </div>
+          <% character_vars['skills']['general_skills'].each do |skill_name, attr| %>
+          <div id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>">
             <div class="w3-third">
-              Astrogation(Int.)
+              <%= skill_name %>(<%= attr['link'] %>)
             </div>
             <div class="w3-third">
-              <input type="checkbox" value="skill_astrogation_true">
+              <input id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_career" <% if attr['career'] %>checked<% end %> type="checkbox" value="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_true">
             </div>
             <div class="w3-third">
-              <input type="number" step="1" value="0">
+              <input id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_ranks" type="number" step="1" value="<%= attr['ranks'] %>">
             </div>
-          </article>
-          <article id="skill_athletics">
-            <div class="w3-third">
-              Athletics(Br)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_athletics_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_charm">
-            <div class="w3-third">
-              Charm(Pr)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_charm_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_coercion">
-            <div class="w3-third">
-              Coercion(Will)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_coercion_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_computers">
-            <div class="w3-third">
-              Computers(Int)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_computers_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_cool">
-            <div class="w3-third">
-              Cool(Pr)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_cool_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_coordination">
-            <div class="w3-third">
-              Coordination(Ag)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_coordination_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_deception">
-            <div class="w3-third">
-              Deception(Cun)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_deception_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_discipline">
-            <div class="w3-third">
-              Discipline(Will)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_discipline_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_leadership">
-            <div class="w3-third">
-              Leadership(Pr)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_leadership_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_mechanics">
-            <div class="w3-third">
-              Mechanics(Int)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_mechanics_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_medicine">
-            <div class="w3-third">
-              Medicine(Int)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_medicine_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_negotiation">
-            <div class="w3-third">
-              Negotiation(Pr)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_negotiation_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_perception">
-            <div class="w3-third">
-              Perception(Cun)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_perception_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_piloting_planetary" class="w3-row">
-            <div class="w3-third">
-              Piloting - Planetary(Ag)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_piloting_planetary_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_piloting_space" class="w3-row">
-            <div class="w3-third">
-              Piloting - Space(Ag)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_piloting_space_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_resilience">
-            <div class="w3-third">
-              Resilience(Br)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_resilience_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_skulduggery">
-            <div class="w3-third">
-              Skulduggery(Cun)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_skulduggery_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_stealth">
-            <div class="w3-third">
-              Stealth(Ag)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_stealth_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_streetwise">
-            <div class="w3-third">
-              Streetwise(Cun)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_streetwise_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_survival">
-            <div class="w3-third">
-              Survival(Cun)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_survival_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article id="skill_vigilance">
-            <div class="w3-third">
-              Vigilance(Will)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_vigilance_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
+          </div>
+          <% end %>
         </section>
       </section>
       <section class="w3-half">
         <section id="combat_skills" class="w3-border w3-row">
           <h3 class="w3-center">Combat Skills</h3>
-          <article>
+          <div id="combat_skills_header">
             <div class="w3-third">
               NAME
             </div>
@@ -456,66 +226,24 @@
             <div class="w3-third">
               RANKS
             </div>
-          </article>
-          <article>
+          </div>
+          <% character_vars['skills']['combat_skills'].each do |skill_name, attr| %>
+          <div id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>">
             <div class="w3-third">
-              Brawl(Br)
+              <%= skill_name %>(<%= attr['link'] %>)
             </div>
             <div class="w3-third">
-              <input type="checkbox" value="skill_brawl_true">
+              <input id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_career" <% if attr['career'] %>checked<% end %> type="checkbox" value="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_true">
             </div>
             <div class="w3-third">
-              <input type="number" step="1" value="0">
+              <input id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_ranks" type="number" step="1" value="<%= attr['ranks'] %>">
             </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Gunnery(Ag)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_gunnery_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Melee(Br)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_melee_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Ranged - Light(Ag)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_ranged_light_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Ranged - Heavy(Ag)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_ranged_heavy_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
+          </div>
+          <% end %>
         </section>
         <section id="knowledge_skills" class="w3-border w3-row">
           <h3 class="w3-center">Knowledge Skills</h3>
-          <article>
+          <div>
             <div class="w3-third">
               NAME
             </div>
@@ -525,88 +253,24 @@
             <div class="w3-third">
               RANKS
             </div>
-          </article>
-          <article>
+          </div>
+          <% character_vars['skills']['knowledge_skills'].each do |skill_name, attr| %>
+          <div id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>">
             <div class="w3-third">
-              Core Worlds(Int)
+              <%= skill_name %>(<%= attr['link'] %>)
             </div>
             <div class="w3-third">
-              <input type="checkbox" value="skill_core_worlds_true">
+              <input id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_career" <% if attr['career'] %>checked<% end %> type="checkbox" value="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_true">
             </div>
             <div class="w3-third">
-              <input type="number" step="1" value="0">
+              <input id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_ranks" type="number" step="1" value="<%= attr['ranks'] %>">
             </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Education(Int)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_education_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Lore(Int)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_lore_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Outer Rim(Int)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_outer_rim_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Underworld(Int)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_underworld_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Xenology(Int)
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_xenology_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              Other:?
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_other_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
+          </div>
+          <% end %>
         </section>
         <section id="custom_skills" class="w3-border w3-row">
           <h3 class="w3-center">Custom Skills</h3>
-          <article>
+          <div>
             <div class="w3-third">
               NAME
             </div>
@@ -616,79 +280,26 @@
             <div class="w3-third">
               RANKS
             </div>
-          </article>
-          <article>
+          </div>
+          <% character_vars['skills']['custom_skills'].each do |skill_name, attr| %>
+          <div id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>">
             <div class="w3-third">
-              <input type="text" name="skill_custom_1_name" value="">
+              <%= skill_name %>(<%= attr['link'] %>)
             </div>
             <div class="w3-third">
-              <input type="checkbox" value="skill_custom_1_true">
+              <input id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_career" <% if attr['career'] %>checked<% end %> type="checkbox" value="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_true">
             </div>
             <div class="w3-third">
-              <input type="number" step="1" value="0">
+              <input id="skill_<%= skill_name.gsub(/-/, '_').gsub(/ /, '').downcase %>_ranks" type="number" step="1" value="<%= attr['ranks'] %>">
             </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              <input type="text" name="skill_custom_2_name" value="">
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_custom_2_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              <input type="text" name="skill_custom_3_name" value="">
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_custom_3_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              <input type="text" name="skill_custom_4_name" value="">
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_custom_4_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              <input type="text" name="skill_custom_5_name" value="">
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_custom_5_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
-          <article>
-            <div class="w3-third">
-              <input type="text" name="skill_custom_6_name" value="">
-            </div>
-            <div class="w3-third">
-              <input type="checkbox" value="skill_custom_6_true">
-            </div>
-            <div class="w3-third">
-              <input type="number" step="1" value="0">
-            </div>
-          </article>
+          </div>
+          <% end %>
         </section>
       </section>
     </section>
     <section id="weapons" class="w3-row">
       <h2 class="w3-center">Weapons</h2>
-      <article id="weapon_headers" class="w3-border w3-row">
+      <div id="weapon_headers" class="w3-border w3-row">
         <div id="weapon_name" class="w3-center w3-col" style="width:16%">
           WEAPON
         </div>
@@ -707,120 +318,133 @@
         <div id="weapon_special" class="w3-center w3-col" style="width:16%">
           SPECIAL
         </div>
-      </article>
-      <article id="weapon_headers" class="w3-border w3-row">
+      </div>
+      <% character_vars['weapons'].each do |weapon| %>
+      <div id="weapon_headers" class="w3-border w3-row">
         <div id="weapon_name" class="w3-center w3-col" style="width:16%">
-          <input type="text" name="weapon_1_name" value="">
+          <input type="text" name="weapon_1_name" value="<%= weapon['name'] %>">
         </div>
         <div id="weapon_skill" class="w3-center w3-col" style="width:16%">
-          <input type="number" step="1" value="0">
+          <input type="number" step="1" value="<%= weapon['skill'] %>">
         </div>
         <div id="weapon_damage" class="w3-center w3-col" style="width:16%">
-          <input type="number" step="1" value="0">
+          <input type="text" step="1" value="<%= weapon['damage'] %>">
         </div>
         <div id="weapon_range" class="w3-center w3-col" style="width:16%">
-          <input type="text" name="weapon_1_range" value="">
+          <input type="text" name="weapon_1_range" value="<%= weapon['range'] %>">
         </div>
         <div id="weapon_crit" class="w3-center w3-col" style="width:16%">
-          <input type="number" step="1" value="0">
+          <input type="number" step="1" value="<%= weapon['crit'] %>">
         </div>
         <div id="weapon_special" class="w3-center w3-col" style="width:16%">
-          <input type="text" name="weapon_1_special" value="">
+          <input type="text" name="weapon_1_special" value="<%= weapon['special'].join(",") %>">
         </div>
-      </article>
+      </div>
+      <% end %>
     </section>
     <section id="personal_information" class="w3-row">
       <h2 class="w3-center">Personal Information</h2>
       <section id="character_description" class="w3-border">
         <h3 class="w3-center">Character Description</h3>
-        <article>
+        <div>
           <text>GENDER:</text>
-          <text>Male</text1>
-        </article>
-        <article>
+          <text><%= character_vars['character_description']['gender'] %></text1>
+        </div>
+        <div>
           <text>AGE:</text>
-          <text>30</text>
-        </article>
-        <article>
+          <text><%= character_vars['character_description']['age'] %></text>
+        </div>
+        <div>
           <text>HEIGHT:</text>
-          <text>5'9</text>
-        </article>
-        <article>
+          <text><%= character_vars['character_description']['height'] %></text>
+        </div>
+        <div>
           <text>BUILD:</text>
-          <text>Stocky</text>
-        </article>
-        <article>
+          <text><%= character_vars['character_description']['build'] %></text>
+        </div>
+        <div>
           <text>HAIR:</text>
-          <text>Brown</text>
-        </article>
-        <article>
+          <text><%= character_vars['character_description']['hair'] %></text>
+        </div>
+        <div>
           <text>EYES:</text>
-          <text>Brown</text>
-        </article>
-        <article>
+          <text><%= character_vars['character_description']['eyes'] %></text>
+        </div>
+        <div>
           <div>NOTABLE FEATURES:</div>
-          <text>weiners</text>
-        </article>
+          <text><%= character_vars['character_description']['notable_features'].join(",") %></text>
+        </div>
       </section>
       <section id="motivations">
         <h3 class="w3-center">Motivations</h3>
-        <article class="w3-border">
+        <% character_vars['motivations'].each do |motivation| %>
+        <div class="w3-border">
           <div>
             <text>TYPE:</text>
-            <text>something</text>
+            <text><%= motivation['name'] %></text>
           </div>
           <div>
             <text>DESCRIPTION:</text>
-            <text>Something.</text>
+            <text><%= motivation['description'] %></text>
           </div>
-        </article>
-        <article></article>
+        </div>
+        <% end %>
       </section>
-      <section id="obligations">
-        <h3 class="w3-center">Obligations</h3>
-        <article class="w3-border">
+      <section id="duties">
+        <h3 class="w3-center">Duties</h3>
+        <div class="w3-border">
+          <% character_vars['duties'].each do |duty| %>
           <div>
             <text>TYPE:</text>
-            <text>something</text>
+            <text><%= duty['name'] %></text>
           </div>
           <div>
             <text>MAGNITUDE:</text>
-            <text>Something.</text>
+            <text><%= duty['magnitude'] %></text>
           </div>
-        </article>
+          <% end %>
+        </div>
+      </section>
+      <section>
+        <h3 class="w3-center">Group Contribution Rank</h3>
+        <div class="w3-border">
+          <%= character_vars['groups_contribution_rank'].join(",") %>
+        </div>
       </section>
     </section>
     <section id="critical_injuries" class="w3-row">
       <h2 class="w3-center">Critical Inuries</h2>
-      <article class="w3-border">
+      <div class="w3-border">
+        <% character_vars['critical_injuries'].each do |cr| %>
         <div>
           <text>SEVERITY:</text>
-          <text>none</text>
+          <text><%= cr['severity'] %></text>
         </div>
         <div>
           <text>RESULT:</text>
-          <text>non</text>
+          <text><%= cr['result'] %></text>
         </div>
-      </article>
+        <% end %>
+      </div>
     </section>
     <section id="equipment" class="w3-row">
       <h2 class="w3-center">Equipment Log</h2>
-      <article>
+      <div>
         <text>CREDITS:</text>
-        <input type="number" step="1" value="0">
-      </article>
+        <input type="number" step="1" value="<%= character_vars['equipment_log']['credits'] %>">
+      </div>
       <section>
         <h3 class="w3-center">Weapons and Armor</h3>
-        <textarea></textarea>
+        <textarea><%= character_vars['equipment_log']['weapons_and_armor'].join(",") %></textarea>
       </section>
       <section>
         <h3 class="w3-center">Personal Gear</h3>
-        <textarea></textarea>
+        <textarea><%= character_vars['equipment_log']['personal_gear'].join(",") %></textarea>
       </section>
     </section>
     <section id="talents_and_special_abilities" class="w3-row">
       <h2 class="w3-center">Talents and Special Abilities</h2>
-      <article class="w3-border w3-row">
+      <div class="w3-border w3-row">
         <div class="w3-quarter">
           NAME
         </div>
@@ -830,18 +454,20 @@
         <div class="w3-rest">
           ABILITY SUMMARY
         </div>
-      </article>
-      <article class="w3-border w3-row">
+      </div>
+      <% character_vars['talents_and_special_abilities'].each do |t_and_a| %>
+      <div class="w3-border w3-row">
         <div class="w3-quarter">
-          <input type="text" name="weapon_1_name" value="">
+          <input type="text" name="weapon_1_name" value="<%= t_and_a['name'] %>">
         </div>
         <div class="w3-quarter">
-          <input type="text" name="weapon_1_name" value="">
+          <input type="text" name="weapon_1_name" value="<%= t_and_a['page'] %>">
         </div>
         <div class="w3-rest">
-          <input type="text" name="weapon_1_name" value="">
+          <input type="text" name="weapon_1_name" value="<%= t_and_a['summary'] %>">
         </div>
-      </article>
+      </div>
+      <% end %>
     </section>
     <footer class="w3-center w3-row">
       <font size="1">
